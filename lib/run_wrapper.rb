@@ -2,8 +2,13 @@ require File.expand_path(File.dirname(__FILE__) + '/wrapper_uploader')
 require File.expand_path(File.dirname(__FILE__) + '/batch_uploader')
 require File.expand_path(File.dirname(__FILE__) + '/api_call_logger')
 
-wrapper_config = ARGV[0]
-transfer_config = ARGV[1]
+#wrapper_config = ARGV[0]
+#transfer_config = ARGV[1]
+#rename_config = ARGV[2]
+
+wrapper_config = '/home/gerarddevine/dev/ror/restful-api-uploader/sample_wrapper_config.yml'
+transfer_config = '/home/gerarddevine/dev/ror/restful-api-uploader/sample_transfer_config.yml'
+renamer_config = '/home/gerarddevine/dev/ror/restful-api-uploader/sample_rename_config.yml'
 
 
 log_file_path = File.join(File.dirname(__FILE__), '..', 'log', 'log.txt')
@@ -55,6 +60,13 @@ wrapper_uploader = WrapperUploader.new(wrapper_config, log_writer)
 wrapper_uploader.run
 
 log_writer.log_message('INFO', "Step 2: Upload wrapper has completed. Check results in #{File.absolute_path(wrapper_uploader.log_file_path)}") #WRITE SUMMARY HERE
+
+#if a rename config file is provided, run it to rename files before HIEv upload
+if File.exist?(renamer_config)
+  log_writer.log_message('INFO', "Step 2b: Renaming upload files ")
+  batch_renamer = BatchRenamer.new(renamer_config, log_writer)
+  batch_renamer.run(3)
+end
 
 #run transfer again for new uploads
 log_writer.log_message('INFO', "Step 3: Processing transfer config file")

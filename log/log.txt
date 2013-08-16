@@ -1,0 +1,121 @@
+2013-08-16 14:15:02 +1000 INFO  windows_api_load starting...
+2013-08-16 14:15:11 +1000 ERROR You need to pass an argument containing the full path of the transfer config yaml file
+2013-08-16 14:15:12 +1000 INFO  Aborting...
+-------------------------------------------------------
+2013-08-16 14:19:17 +1000 INFO  windows_api_load starting...
+2013-08-16 14:21:20 +1000 INFO  Step 1: Processing transfer config file...
+2013-08-16 14:22:25 +1000 WARN  File details {"source_directory"=>"C:\\Documents and Settings\\Administrator\\My Documents\\pending", "file"=>"toa5.dat", "transfer_to_directory"=>"C:\\Documents and Settings\\Administrator\\My Documents\\done", "file_parameters"=>{"description"=>"some desc", "type"=>"RAW", "experiment_id"=>78}} No such file or directory - C:\Documents and Settings\Administrator\My Documents\pending
+2013-08-16 14:22:25 +1000 WARN  File details {"source_directory"=>"C:\\Documents and Settings\\Administrator\\My Documents\\pending", "file"=>/\Afilename_\d{8}.dat\Z/, "transfer_to_directory"=>"C:\\Documents and Settings\\Administrator\\My Documents\\done", "file_parameters"=>{"type"=>"UNKNOWN", "experiment_id"=>78, "tag_names"=>"Photo,Video"}} No such file or directory - C:\Documents and Settings\Administrator\My Documents\pending
+2013-08-16 14:22:25 +1000 INFO  Step 1 Completed: 2 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 14:22:37 +1000 INFO  Step 2: Processing wrapper config file...
+2013-08-16 14:58:29 +1000 ERROR No such file or directory - C:\Campbellsci\LoggerNet/ROS_WS_Table2.dat
+2013-08-16 14:58:35 +1000 ERROR No such file or directory - C:\Campbellsci\LoggerNet/ROS_WS_Table05min.dat
+2013-08-16 14:58:39 +1000 INFO  Step 2 Completed: 0 warnings, 0/2 files moved/copied.
+2013-08-16 14:58:46 +1000 INFO  Step 2: Upload wrapper has completed. Check results in /home/gerarddevine/dev/ror/restful-api-uploader/log/log.txt
+2013-08-16 14:58:46 +1000 INFO  Step 3: Processing transfer config file
+2013-08-16 14:58:46 +1000 WARN  File details {"source_directory"=>"C:\\Documents and Settings\\Administrator\\My Documents\\pending", "file"=>"toa5.dat", "transfer_to_directory"=>"C:\\Documents and Settings\\Administrator\\My Documents\\done", "file_parameters"=>{"description"=>"some desc", "type"=>"RAW", "experiment_id"=>78}} No such file or directory - C:\Documents and Settings\Administrator\My Documents\pending
+2013-08-16 14:58:46 +1000 WARN  File details {"source_directory"=>"C:\\Documents and Settings\\Administrator\\My Documents\\pending", "file"=>/\Afilename_\d{8}.dat\Z/, "transfer_to_directory"=>"C:\\Documents and Settings\\Administrator\\My Documents\\done", "file_parameters"=>{"type"=>"UNKNOWN", "experiment_id"=>78, "tag_names"=>"Photo,Video"}} No such file or directory - C:\Documents and Settings\Administrator\My Documents\pending
+2013-08-16 14:58:46 +1000 INFO  Step 3 Completed: 2 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 14:58:46 +1000 INFO  Upload script has finished.
+-------------------------------------------------------
+2013-08-16 15:15:16 +1000 INFO  windows_api_load starting...
+2013-08-16 15:15:26 +1000 INFO  Step 1: Processing transfer config file...
+2013-08-16 15:15:28 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:15:28 +1000 INFO  Step 1 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:15:28 +1000 INFO  Step 2: Processing wrapper config file...
+2013-08-16 15:15:28 +1000 ERROR No such file or directory - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending/FACE_R5_T1_Pair_20130831_20130831.dat
+2013-08-16 15:15:28 +1000 INFO  Step 2 Completed: 0 warnings, 0/1 files moved/copied.
+2013-08-16 15:15:28 +1000 INFO  Step 2: Upload wrapper has completed. Check results in /home/gerarddevine/dev/ror/restful-api-uploader/log/log.txt
+2013-08-16 15:15:28 +1000 INFO  Step 3: Processing transfer config file
+2013-08-16 15:15:28 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:15:28 +1000 INFO  Step 3 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:15:28 +1000 INFO  Upload script has finished.
+-------------------------------------------------------
+2013-08-16 15:17:14 +1000 INFO  windows_api_load starting...
+2013-08-16 15:17:14 +1000 INFO  Step 1: Processing transfer config file...
+2013-08-16 15:17:14 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:17:14 +1000 INFO  Step 1 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:17:14 +1000 INFO  Step 2: Processing wrapper config file...
+2013-08-16 15:17:14 +1000 ERROR No such file or directory - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+2013-08-16 15:17:14 +1000 INFO  Step 2 Completed: 0 warnings, 0/1 files moved/copied.
+2013-08-16 15:17:14 +1000 INFO  Step 2: Upload wrapper has completed. Check results in /home/gerarddevine/dev/ror/restful-api-uploader/log/log.txt
+2013-08-16 15:17:14 +1000 INFO  Step 3: Processing transfer config file
+2013-08-16 15:17:14 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:17:14 +1000 INFO  Step 3 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:17:14 +1000 INFO  Upload script has finished.
+-------------------------------------------------------
+2013-08-16 15:19:16 +1000 INFO  windows_api_load starting...
+2013-08-16 15:19:16 +1000 INFO  Step 1: Processing transfer config file...
+2013-08-16 15:19:16 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:19:16 +1000 INFO  Step 1 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:19:16 +1000 INFO  Step 2: Processing wrapper config file...
+2013-08-16 15:19:16 +1000 ERROR File /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending/FACE_R5_T1_Pair_20130831_20130831.dat already exists in upload queue. Upload of this file has been aborted.
+2013-08-16 15:19:16 +1000 INFO  Step 2 Completed: 0 warnings, 0/1 files moved/copied.
+2013-08-16 15:19:16 +1000 INFO  Step 2: Upload wrapper has completed. Check results in /home/gerarddevine/dev/ror/restful-api-uploader/log/log.txt
+2013-08-16 15:19:16 +1000 INFO  Step 3: Processing transfer config file
+2013-08-16 15:19:16 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:19:16 +1000 INFO  Step 3 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:19:16 +1000 INFO  Upload script has finished.
+-------------------------------------------------------
+2013-08-16 15:23:00 +1000 INFO  windows_api_load starting...
+2013-08-16 15:23:00 +1000 INFO  Step 1: Processing transfer config file...
+2013-08-16 15:23:00 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:23:00 +1000 INFO  Step 1 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:23:00 +1000 INFO  Step 2: Processing wrapper config file...
+2013-08-16 15:23:00 +1000 ERROR No such file or directory - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/FACE_R5_T1_Pair_20130831.dat
+2013-08-16 15:23:00 +1000 INFO  Step 2 Completed: 0 warnings, 0/1 files moved/copied.
+2013-08-16 15:23:00 +1000 INFO  Step 2: Upload wrapper has completed. Check results in /home/gerarddevine/dev/ror/restful-api-uploader/log/log.txt
+2013-08-16 15:23:00 +1000 INFO  Step 3: Processing transfer config file
+2013-08-16 15:23:00 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:23:00 +1000 INFO  Step 3 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:23:00 +1000 INFO  Upload script has finished.
+-------------------------------------------------------
+2013-08-16 15:23:44 +1000 INFO  windows_api_load starting...
+2013-08-16 15:23:44 +1000 INFO  Step 1: Processing transfer config file...
+2013-08-16 15:23:44 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:23:44 +1000 INFO  Step 1 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:23:44 +1000 INFO  Step 2: Processing wrapper config file...
+2013-08-16 15:23:44 +1000 INFO  Step 2 Completed: 0 warnings, 1/1 files moved/copied.
+2013-08-16 15:23:44 +1000 INFO  Step 2: Upload wrapper has completed. Check results in /home/gerarddevine/dev/ror/restful-api-uploader/log/log.txt
+2013-08-16 15:23:44 +1000 INFO  Step 3: Processing transfer config file
+2013-08-16 15:23:44 +1000 INFO  Transfering #<File:/home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending/FACE_R5_T1_Pair_20130831.dat>
+2013-08-16 15:23:45 +1000 INFO  Response code: 301 2013-08-16 15:23:45 +1000 WARN  757: unexpected token at '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://jp-dc21-staging.intersect.org.au/data_files/api_create">here</a>.</p>
+<hr>
+<address>Apache/2.2.3 (CentOS) Server at jp-dc21-staging.intersect.org.au Port 80</address>
+</body></html>
+'
+2013-08-16 15:23:45 +1000 INFO  Step 3 Completed: 1 warnings, 0/1 files transferred/attempted (0.00MB)
+2013-08-16 15:23:45 +1000 INFO  Upload script has finished.
+-------------------------------------------------------
+2013-08-16 15:57:01 +1000 INFO  windows_api_load starting...
+2013-08-16 15:57:01 +1000 INFO  Step 1: Processing transfer config file...
+2013-08-16 15:57:01 +1000 WARN  Did not find any files matching file FACE_R5_T1_Pair_20130831.dat in directory /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+2013-08-16 15:57:01 +1000 INFO  Step 1 Completed: 1 warnings, 0/0 files transferred/attempted (0.00MB)
+2013-08-16 15:57:01 +1000 INFO  Step 2: Processing wrapper config file...
+2013-08-16 15:57:01 +1000 INFO  Step 2 Completed: 0 warnings, 1/1 files moved/copied.
+2013-08-16 15:57:01 +1000 INFO  Step 2: Upload wrapper has completed. Check results in /home/gerarddevine/dev/ror/restful-api-uploader/log/log.txt
+2013-08-16 15:57:01 +1000 INFO  Step 3: Processing transfer config file
+2013-08-16 15:57:01 +1000 INFO  Transfering #<File:/home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending/FACE_R5_T1_Pair_20130831.dat>
+2013-08-16 15:57:06 +1000 INFO  Response code: 400  messages: ["Supplied experiment id does not exist"]
+2013-08-16 15:57:06 +1000 INFO  Step 3 Completed: 0 warnings, 0/1 files transferred/attempted (0.00MB)
+2013-08-16 15:57:06 +1000 INFO  Upload script has finished.
+-------------------------------------------------------
+2013-08-16 15:57:55 +1000 INFO  windows_api_load starting...
+2013-08-16 15:57:55 +1000 INFO  Step 1: Processing transfer config file...
+2013-08-16 15:57:55 +1000 INFO  Transfering #<File:/home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending/FACE_R5_T1_Pair_20130831.dat>
+2013-08-16 15:57:57 +1000 INFO  Response code: 200 (SUCCESS) messages: ["File uploaded successfully."]
+2013-08-16 15:57:57 +1000 INFO  Step 1 Completed: 0 warnings, 1/1 files transferred/attempted (0.05MB)
+2013-08-16 15:57:57 +1000 INFO  Step 2: Processing wrapper config file...
+2013-08-16 15:57:57 +1000 INFO  Step 2 Completed: 0 warnings, 1/1 files moved/copied.
+2013-08-16 15:57:57 +1000 INFO  Step 2: Upload wrapper has completed. Check results in /home/gerarddevine/dev/ror/restful-api-uploader/log/log.txt
+2013-08-16 15:57:57 +1000 INFO  Step 3: Processing transfer config file
+2013-08-16 15:57:57 +1000 INFO  Transfering #<File:/home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending/FACE_R5_T1_Pair_20130831.dat>
+2013-08-16 15:58:00 +1000 INFO  Response code: 200 (SUCCESS) messages: ["The file replaced one or more other files with similar data. Replaced files: FACE_R5_T1_Pair_20130831.dat"]
+2013-08-16 15:58:00 +1000 INFO  Step 3 Completed: 0 warnings, 1/1 files transferred/attempted (0.05MB)
+2013-08-16 15:58:00 +1000 INFO  Upload script has finished.
+-------------------------------------------------------
