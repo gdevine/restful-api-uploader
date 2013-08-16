@@ -1,5 +1,10 @@
 restful-api-uploader
 ====================
+
+GD Extension to restful-api-uploader to allow renaming of files before ingest to HIEv:
+
+INTERSECT DC21 text below:
+
 A set of ruby scripts and configuration for uploading files to a RESTful API endpoint using multipart HTTP POST.
 
 This is intended to be used for scenarios where we want to run scheduled uploads of automatically generated data files.
