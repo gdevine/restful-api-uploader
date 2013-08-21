@@ -12,7 +12,7 @@ files:
       #The first destination directory is compulsory. 
       #It specifies the destination for files to be placed when they are ready for upload.
       #The transfer script will use this directory as its source file, and perform the upload to DC21.
-      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
       #additional destinations can be specified for managing backups.
       #The behaviour of file rotation or 'backing up' is defined by the rotate value below
       - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS

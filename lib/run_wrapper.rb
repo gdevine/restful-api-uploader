@@ -1,5 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/wrapper_uploader')
 require File.expand_path(File.dirname(__FILE__) + '/batch_uploader')
+require File.expand_path(File.dirname(__FILE__) + '/batch_renamer')
 require File.expand_path(File.dirname(__FILE__) + '/api_call_logger')
 
 #wrapper_config = ARGV[0]
@@ -8,7 +9,7 @@ require File.expand_path(File.dirname(__FILE__) + '/api_call_logger')
 
 wrapper_config = '/home/gerarddevine/dev/ror/restful-api-uploader/sample_wrapper_config.yml'
 transfer_config = '/home/gerarddevine/dev/ror/restful-api-uploader/sample_transfer_config.yml'
-renamer_config = '/home/gerarddevine/dev/ror/restful-api-uploader/sample_rename_config.yml'
+renamer_config = '/home/gerarddevine/dev/ror/restful-api-uploader/sample_renamer_config.yml'
 
 
 log_file_path = File.join(File.dirname(__FILE__), '..', 'log', 'log.txt')

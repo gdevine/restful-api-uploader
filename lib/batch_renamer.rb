@@ -9,8 +9,7 @@ $total_file_size = 0
 $warnings = 0
 
 class BatchRenamer
-
-  attr_accessor :config, :log_writer, :log_file_path, :file_parameter_name, :file_uploader
+  attr_accessor :config, :loc, :log_writer, :log_file_path
 
   def initialize(config_path, log_writer)
     self.log_file_path = File.join(File.dirname(__FILE__), '..', 'log', 'log.txt')
@@ -18,9 +17,8 @@ class BatchRenamer
 
     begin
       self.config = YAML.load_file(config_path)
-      self.file_parameter_name = config['file_parameter_name']
-      self.file_uploader = FileUploader.new(log_writer, file_parameter_name, url)
-
+      self.loc = config['source_directory']
+      
       raise "Supplied YML file did not contain an array named 'files'" unless config['files'].is_a?(Array)
     rescue => e
       log_writer.log_error(e)
@@ -31,10 +29,49 @@ class BatchRenamer
   end
 
   def run(step)
+    # begin
+      # config['files'].each do |group|
+        # begin
+          # routine = group['renamer_routine']
+          # case routine
+          # when "1"
+            # puts '1!'
+          # when "2"
+            # puts 'Try harder!'
+          # when "3"
+            # puts '3!'
+          # else
+            # raise "renamer_routine not recognised"
+          # end
+        # rescue => e
+          # $warnings += 1
+          # log_writer.log_group_error(group, e)
+        # end
+      # end
+    # ensure
+      # $warnings = 0
+    # end
+    
+    
     begin
       config['files'].each do |group|
         begin
-          process_file_group(group)
+          begin
+          routine = group['renamer_routine']
+          case routine
+          when 1
+            puts '1!'
+          when 2
+            puts 'Try harder!'
+          when 3
+            puts '3!'
+          else
+            raise "renamer_routine not recognised"
+          end
+        rescue => e
+          $warnings += 1
+          log_writer.log_group_error(group, e)
+        end
         rescue => e
           $warnings += 1
           log_writer.log_group_error(group, e)
@@ -51,6 +88,9 @@ class BatchRenamer
       $total_file_size = 0
       $warnings = 0
     end
+    
+    
+    
   end
 
 

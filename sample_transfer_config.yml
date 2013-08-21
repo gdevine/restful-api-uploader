@@ -15,7 +15,7 @@ file_parameter_name: file
 files:
   -
     #directory where the file will be found
-    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/pending
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
     #filename or regex
     file: FACE_R5_T1_Pair_20130831.dat
     #transfer to path - directory to move files to after successful upload
