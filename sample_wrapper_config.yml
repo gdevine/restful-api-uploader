@@ -6,7 +6,7 @@ files:
     #directory where the file will be found
     path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
     #filename (can include regular expressions)
-    file: FACE_R5_T1_Pair.dat
+    file: FACE_R1_B1_SoilVars.dat
     #The directories where files will be placed. At least one is required
     destination: 
       #The first destination directory is compulsory. 
