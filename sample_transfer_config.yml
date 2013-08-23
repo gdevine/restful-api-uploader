@@ -5,23 +5,177 @@ api_endpoint: https://jp-dc21-staging.intersect.org.au/data_files/api_create
 # this might be used to provide authentication information if tokens are being used
 common_parameters:
   auth_token: PSEsmywGqiEMyVni5r54
-  
+
 #the name of the file part parameter to send in the multipart post
 file_parameter_name: file
 
 # Add one stanza below for each file or file pattern.
 # Using a simple string will exactly match a single file
 # Using a regular expression will result in all files that match the pattern being uploaded - more below re regex usage
+
 files:
   -
-    #directory where the file will be found
     source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
     #filename or regex
-    file: FACE_AUTO_R1_SOILVARS_R_20130831.dat
+    file: !ruby/regexp /\AFACE_(AUTO|P[0-9]{4})_R([1-6]{1,5}|A|0)_AIRVARS_R_[0-9]{8}\.dat\Z/
     #transfer to path - directory to move files to after successful upload
     transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
     # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
     file_parameters:
-      description: some desc
+      description: Air Temperature, Relitive humidity, PAR and Throughfall measurements below the canopy averaged over 1 minute.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
       type: RAW
       experiment_id: 21
+  -
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    file: !ruby/regexp /\AFACE_(AUTO|P[0-9]{4})_R([1-6]{1,5}|A|0)_DENDROS_R_[0-9]{8}\.dat\Z/
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: Linear displacement measurments of tree stems read 15 minutely.  Data collected in relation to Project 0025 at the EucFACE site, please contact Project participants for enquries related to the data.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 20
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_(AUTO|P[0-9]{4})_R([1-6]{1,5}|A|0)_SHFPLATES_R_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: Soil heat flux plate readings averaged every 15 minutes.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_(AUTO|P[0-9]{4})_R([1-6]{1,5}|A|0)_SOILVARS_R_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: Soil moisture and Temperature readings at different depths, averaged every 15 minutes.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_R[1-6]_B[2-3]_sap_HeatPulsers_[0-9]{8}\.dat\Z/ 
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: Sap flow probe readings taken every 10 minutes.  Data collected in relation to Project 0018 at the EucFACE site, please contact Project participants for enquries related to the data.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 22
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_R[1-6]_B[2-3]_sap_Therminfo_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: Sap flow probe readings taken every 10 minutes.  Data collected in relation to Project 0018 at the EucFACE site, please contact Project participants for enquries related to the data.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 22
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_fast_CO2_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: 10 hz high speed CO2 measurements taken at the control point of a fumigated EucFACE ring.  Contact Steven Wohl for enquries about the data.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_(AUTO|P[0-9]{4})_R([1-6]{1,5}|A|0)_GENERAL_R_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: General Radiation, Air Temperature, Relative Humidity and Surface temperatures above the canopy averaged every minute.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_(AUTO|P[0-9]{4})_R([1-6]{1,5}|A|0)_PAIR_R_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: Barometric Pressure averaged every 15 minutes at the top of the canopy.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_(AUTO|P[0-9]{4})_R([1-6]{1,5}|A|0)_RAIN_R_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: Tipping bucket rainfall taken above the canopy in a ring every 15 minutes.  Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_ts_data_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: Descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACE_(AUTO|P[0-9]{4})_R([1-6]{1,5}|A|0)_FLUX_R_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACELawn_FACE_diffPAR_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+  -
+    #directory where the file will be found
+    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+    #filename or regex
+    file: !ruby/regexp /\AFACELawn_FACE_Rain_[0-9]{8}\.dat\Z/
+    #transfer to path - directory to move files to after successful upload
+    transfer_to_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/done
+    # specify any additional file-specific POST parameters to send with the file, these will be added to the multipart POST
+    file_parameters:
+      description: descriptions of the variables can be found at sites.google.com/site/hievuws/mappings
+      type: RAW
+      experiment_id: 21
+      

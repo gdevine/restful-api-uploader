@@ -3,21 +3,87 @@
 # Using a regular expression will result in all files that match the pattern being uploaded - more below re regex usage
 files:
   -
-    #directory where the file will be found
     path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
-    #filename (can include regular expressions)
-    file: FACE_R1_B1_SoilVars.dat
-    #The directories where files will be placed. At least one is required
+    file: !ruby/regexp /\AFACE_R[1-6]_B1_AirVars\.dat\Z/
     destination: 
-      #The first destination directory is compulsory. 
-      #It specifies the destination for files to be placed when they are ready for upload.
-      #The transfer script will use this directory as its source file, and perform the upload to DC21.
       - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
-      #additional destinations can be specified for managing backups.
-      #The behaviour of file rotation or 'backing up' is defined by the rotate value below
       - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
-    #The rotate parameter can be set to 'daily', 'weekly' or 'monthly'.
-    #The value determines how frequently files are backed-up and rotated through destination directories.
-    #A datestamp will be automatically appended to each file, which signifies the next rotation date.
-    #It is also permissibl to leave this field blank, in which case no datestamp will be appended,
     rotate: monthly
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_B1_Dendros\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: monthly
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_B1_SHFplates\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: monthly
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_B1_SoilVars\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: monthly
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_B[2-3]_sap_HeatPulsers\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: monthly
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_B[2-3]_sap_Therminfo\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: monthly
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_fast_CO2\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: daily
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_general\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: monthly
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_Pair\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: monthly
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_Rain\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: monthly
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_ts_data\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: daily
+  -
+    path: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet
+    file: !ruby/regexp /\AFACE_R3_T1_flux\.dat\Z/
+    destination: 
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+      - /home/gerarddevine/dev/ror/restful-api-uploader/test_data/LoggerNet/Backups/YYYYMMDD_HHMMSS
+    rotate: monthly
+    

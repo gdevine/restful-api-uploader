@@ -59,14 +59,14 @@ batch_uploader.run(1)
 log_writer.log_message('INFO', "Step 2: Processing wrapper config file...")
 wrapper_uploader = WrapperUploader.new(wrapper_config, log_writer)
 wrapper_uploader.run
-
 log_writer.log_message('INFO', "Step 2: Upload wrapper has completed. Check results in #{File.absolute_path(wrapper_uploader.log_file_path)}") #WRITE SUMMARY HERE
 
 #if a rename config file is provided, run it to rename files before HIEv upload
 if File.exist?(renamer_config)
   log_writer.log_message('INFO', "Step 2b: Renaming upload files ")
   batch_renamer = BatchRenamer.new(renamer_config, log_writer)
-  batch_renamer.run(2)
+  batch_renamer.run
+  log_writer.log_message('INFO', "Step 2b: File renaming has completed. Check results in #{File.absolute_path(wrapper_uploader.log_file_path)}")
 end
 
 #run transfer again for new uploads
@@ -75,5 +75,7 @@ batch_uploader = BatchUploader.new(transfer_config, log_writer)
 batch_uploader.run(3)
 
 log_writer.log_message('INFO', "Upload script has finished.")
+log_writer.log_message('INFO', "------------------------------------------------")
+log_writer.log_message('INFO', "")
 
 log_writer.close

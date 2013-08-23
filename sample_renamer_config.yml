@@ -5,18 +5,27 @@
 # --Date   : August 2013
 #----------------------------------------------------------------------------------------------------------------
 
+#location of files to be renamed (i.e. normally the UploadPending directory)
+source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
+
 
 # Add one stanza below for each file or file pattern.
 # Using a simple string will exactly match a single file
-# Using a regular expression will result in all files that match the pattern being renamed - more below re regex usage
-
+# Using a regular expression will result in all files that match the pattern being renamed
 
 files:
   -    
-    #location of files to be renamed (i.e. normally the UploadPending directory)
-    source_directory: /home/gerarddevine/dev/ror/restful-api-uploader/test_data/UploadPending
     #filename or regex to be renamed
     file: !ruby/regexp /\AFACE_R[1-6]_B1_SoilVars_[0-9]{8}\.dat\Z/
-    #renamer routine - which renamer routine to use
+    #which of the renamer routines to use
+    renamer_routine: 1
+  -    
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_Pair_[0-9]{8}\.dat\Z/
+    renamer_routine: 1
+  -    
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_Rain_[0-9]{8}\.dat\Z/
+    renamer_routine: 1
+  -    
+    file: !ruby/regexp /\AFACE_R[1-6]_T1_general_[0-9]{8}\.dat\Z/
     renamer_routine: 1
     
