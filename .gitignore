@@ -2,4 +2,5 @@ log/log.txt
 .idea
 tmp
 .bundle
-temp_data/
+temp_data/*
+.project
