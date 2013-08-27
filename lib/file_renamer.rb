@@ -16,6 +16,8 @@ class FileRenamer
       orig_file_path = File.join(source_dir, orig_file)
       
       FileUtils.mv orig_file_path, new_file_path
+      
+      log_writer.log_message('INFO', "*** Rename completed: #{orig_file_path} renamed to  #{new_file_path}")
     rescue
       log_writer.log_warning($!)
       false
@@ -32,6 +34,7 @@ class FileRenamer
       orig_file_path = File.join(source_dir, orig_file)
       
       FileUtils.mv orig_file_path, new_file_path
+      log_writer.log_message('INFO', "*** Rename completed: #{orig_file_path} renamed to  #{new_file_path}")
     rescue
       log_writer.log_warning($!)
       false   

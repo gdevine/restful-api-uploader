@@ -9,16 +9,15 @@ $total_file_size = 0
 $warnings = 0
 
 class BatchRenamer
-  attr_accessor :config, :log_writer, :log_file_path, :file_renamer, :source_dir, :source_files
+  attr_accessor :config, :log_writer, :file_renamer, :source_dir, :source_files
 
 
   def initialize(config_path, log_writer)
-    self.log_file_path = File.join(File.dirname(__FILE__), '..', 'log', 'log.txt')
     self.log_writer = log_writer
         
     begin
       self.config = YAML.load_file(config_path)
-      self.file_renamer = FileRenamer.new(log_writer)
+      #self.file_renamer = FileRenamer.new(log_writer)
       self.source_dir = config['source_directory']
       self.source_files = get_source_files(source_dir)
       
@@ -94,10 +93,12 @@ class BatchRenamer
           $count_files += 1
           case routine
           when 1
+            file_renamer = FileRenamer.new(log_writer)
             #pass in both the directory path and the filename
             success = file_renamer.rename_1(source_dir, file)
             puts '1!'
           when 2
+            file_renamer = FileRenamer.new(log_writer)
             success = file_renamer.rename_2(source_dir, file)
             puts '2!'
           else

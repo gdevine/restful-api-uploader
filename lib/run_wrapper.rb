@@ -66,7 +66,7 @@ if File.exist?(renamer_config)
   log_writer.log_message('INFO', "Step 2b: Renaming upload files ")
   batch_renamer = BatchRenamer.new(renamer_config, log_writer)
   batch_renamer.run
-  log_writer.log_message('INFO', "Step 2b: File renaming has completed. Check results in #{File.absolute_path(wrapper_uploader.log_file_path)}")
+  log_writer.log_message('INFO', "Step 2b: File renaming has completed.")
 end
 
 #run transfer again for new uploads
